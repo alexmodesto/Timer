@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importación de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Importación de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="style.css">
+    <title>Reloj Digital Multifunción</title>
+</head>
+<body>
+    <div class="main-container">
+        <div id="timeDisplay"></div>
+        <div class="module countdown-module col-lg-4 col-md-6 col-sm-12">
+            <div class="module-inner">
+                <div class="module-title">
+                    <h4>Temporizador de cuenta regresiva ⏳</h4>
+                </div>
+                <input type="number" id="inputHours" class="input-rounded" min="0" max="24" placeholder="Horas">
+                <input type="number" id="inputMinutes" class="input-rounded" min="0" max="60" placeholder="Minutos">
+                <input type="number" id="inputSeconds" class="input-rounded" min="0" max="60" placeholder="Segundos">
+                <div class="module-buttons">
+                    <button onclick="startCountdown()" class="btn-large">Iniciar</button>
+                    <button onclick="pauseCountdown()" class="btn-large">Pausar</button>
+                    <button onclick="resetCountdown()" class="btn-large">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+        <div class="module stopwatch-module col-lg-4 col-md-6 col-sm-12">
+            <div class="module-inner">
+                <div class="module-title">
+                    <h4>Cronómetro ⏱</h4>
+                </div>
+                <input type="number" id="hoursWatch" class="rounded" placeholder="Horas" value="00">
+                <input type="number" id="minutesWatch" class="rounded" placeholder="Minutos" value="00">
+                <input type="number" id="secondsWatch" class="rounded" placeholder="Segundos" value="00">
+                <input type="number" id="millisecondsWatch" class="rounded" placeholder="ms" value="00">
+                <div class="module-buttons">
+                    <button onclick="operateWatch()" class="btn-large">Iniciar</button>
+                    <button onclick="pauseWatch()" class="btn-large">Pausar</button>
+                    <button onclick="resetWatch()" class="btn-large">Reiniciar</button>
+                </div>
+            </div>
+        </div>
+        <div class="module alarm-module col-lg-4 col-md-6 col-sm-12">
+            <div class="module-inner">
+                <div class="module-title">
+                    <h4>Alarma ⏰</h4>
+                </div>
+                <input type="number" id="alarmHours" class="alarm-input" min="0" max="24" placeholder="Horas">
+                <input type="number" id="alarmMinutes" class="alarm-input" min="0" max="60" placeholder="Minutos">
+                <div class="module-buttons">
+                    <button onclick="activateAlarm()" class="btn-large">Configurar</button>
+                    <button onclick="deactivateAlarm()" class="btn-large">Detener</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carga de scripts -->
+    <script src="index.js"></script>
+</body>
+</html>

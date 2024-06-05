@@ -1,0 +1,76 @@
+body{
+    padding-bottom: 5%;
+    background-image: url("clock_background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: backgroundShift 30s infinite alternate;
+}
+
+h4{
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+}
+.main-container{
+    padding: 5%;
+}
+.module{
+    padding: 5%;
+    border: 3px solid #202830;
+    max-width: 450px;
+    margin: 20px;
+    background-color: #202830;
+    transition: all 0.3s ease-in-out;
+}
+.module:hover{
+    padding: 5.5%;
+    transform: scale(1.05);
+}
+
+#timeDisplay{
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 5vw;
+    color: #202830;
+    animation: fadeIn 5s infinite alternate;
+}
+
+.module-inner, .stopwatch-module, .alarm-module{
+    padding: 3%;
+}
+
+.module-title{
+    color: #e1e1e1;
+}
+
+.input-rounded,
+.alarm-input{
+    padding: 3%;
+    max-width: 60px;
+    font-family: 'Digital Numbers', monospace;
+}
+
+.btn-large{
+    width: 120px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+    border: none;
+    background-color: #404040;
+    color: #e1e1e1;
+    cursor: pointer;
+}
+.btn-large:hover{
+    background-color: #505050;
+}
+
+@keyframes backgroundShift {
+    0% {background-position: left top;}
+    100% {background-position: right bottom;}
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
